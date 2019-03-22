@@ -72,7 +72,5 @@ deploy:
   prerelease: $(project_version_is_prerelease)
   draft: false
   artifact: progminer
-  auth_token:
-    secure:  974666f5687965820fd1bcaeecb3236019c92083
   on:
     appveyor_repo_tag: true
