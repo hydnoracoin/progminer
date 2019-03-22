@@ -59,7 +59,7 @@ Connecting to [progpool.pro](https://progpool.pro):
 
 | CI          | OS       | Status  | Development builds |
 | ----------- | -------- | -----   | -----------------  |
-| AppVeyor    | Windows  | ![AppVeyor](https://img.shields.io/appveyor/ci/jean-m-cyr/progminer/master.svg) | ✓ Build artifacts available for all PRs and branches |
+| AppVeyor    | Windows  | [![Build status](https://ci.appveyor.com/api/projects/status/9gknb76px6t455rf/branch/master?svg=true)](https://ci.appveyor.com/project/jean-m-cyr/progminer/branch/master) | ✓ Build artifacts available for all PRs and branches |
 
 The AppVeyor system automatically builds a Windows .exe for every commit. The latest version is always available [on the landing page](https://ci.appveyor.com/project/jean-m-cyr/progminer) or you can [browse the history](https://ci.appveyor.com/project/jean-m-cyr/progminer/history) to access previous builds.
 
