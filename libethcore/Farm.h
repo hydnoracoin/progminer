@@ -307,6 +307,10 @@ private:
 
     static Farm* m_this;
     std::map<std::string, DeviceDescriptor>& m_DevicesCollection;
+
+#if DEV_BUILD
+    uint32_t m_period = 0;
+#endif
 };
 
 }  // namespace eth
