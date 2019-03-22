@@ -8,11 +8,11 @@
 
 ## Features
 
-* First commercial ProgPoW miner software for miners.
+* Open source ProgPoW miner software for miners.
 * OpenCL mining
 * Nvidia CUDA mining
 * realistic benchmarking against arbitrary epoch/DAG/blocknumber
-* on-GPU DAG generation (no more DAG files on disk)
+* on-GPU DAG generation
 * stratum mining without proxy
 * OpenCL devices picking
 * farm failover (getwork + stratum)
