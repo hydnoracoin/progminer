@@ -234,6 +234,15 @@ void Farm::setWork(WorkPackage const& _newWp)
         m_currentWp.startNonce = _startNonce + ((uint64_t)i << m_nonce_segment_with);
         m_miners.at(i)->setWork(m_currentWp);
     }
+
+#if DEV_BUILD
+    uint32_t period = m_currentWp.block / PROGPOW_PERIOD;
+    if (m_period != period)
+    {
+        m_period = period;
+        cnote << "New ProgPow period: " << period;
+    }
+#endif
 }
 
 /**

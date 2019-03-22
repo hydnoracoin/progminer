@@ -235,7 +235,9 @@ void CUDAMiner::workLoop()
                 }
                 old_period_seed = period_seed;
                 m_kernelExecIx ^= 1;
+#if DEV_BUILD
                 cudalog << "Launching period " << period_seed << " ProgPow kernel";
+#endif
                 m_nextProgpowPeriod = period_seed + 1;
                 m_compileThread = new boost::thread(boost::bind(&CUDAMiner::asyncCompile, this));
             }
@@ -339,11 +341,11 @@ void CUDAMiner::enumDevices(std::map<string, DeviceDescriptor>& _DevicesCollecti
 
 void CUDAMiner::asyncCompile()
 {
-    auto saveName = getThreadName();
-    setThreadName(name().c_str());
-
     if (!dropThreadPriority())
         cudalog << "Unable to lower compiler priority.";
+
+    auto saveName = getThreadName();
+    setThreadName(name().c_str());
 
     cuCtxSetCurrent(m_context);
 
@@ -460,8 +462,10 @@ void CUDAMiner::compileKernel(uint64_t period_seed, uint64_t dag_elms, CUfunctio
     // Destroy the program.
     NVRTC_SAFE_CALL(nvrtcDestroyProgram(&prog));
 
+#ifdef DEV_BUILD
     cudalog << "Pre-compiled period " << period_seed << " CUDA ProgPow kernel for arch "
             << to_string(device_props.major) << '.' << to_string(device_props.minor);
+#endif
 }
 
 void CUDAMiner::search(
