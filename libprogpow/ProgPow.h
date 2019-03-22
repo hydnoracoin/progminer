@@ -23,12 +23,14 @@
 class ProgPow
 {
 public:
-	typedef enum {
-		KERNEL_CUDA,
-		KERNEL_CL
-	} kernel_t;
+    typedef enum
+    {
+        KERNEL_CUDA,
+        KERNEL_CL
+    } kernel_t;
 
-	static std::string getKern(uint64_t seed, kernel_t kern);
+    static std::string getKern(uint64_t seed, kernel_t kern);
+
 private:
     static std::string math(std::string d, std::string a, std::string b, uint32_t r);
     static std::string merge(std::string a, std::string b, uint32_t r);
