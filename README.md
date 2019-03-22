@@ -53,6 +53,22 @@ Connecting to [progpool.pro](https://progpool.pro):
 
 `progminer.exe -P stratum1+tcp://0xaa16a61dec2d3e260cd1348e48cd259a5fb03f49.test@progpool.pro:8008`
 
+## Build
+
+### Continuous Integration and development builds
+
+| CI          | OS       | Status  | Development builds |
+| ----------- | -------- | -----   | -----------------  |
+| AppVeyor    | Windows  | ![AppVeyor](https://img.shields.io/appveyor/ci/jean-m-cyr/progminer/master.svg) | ✓ Build artifacts available for all PRs and branches |
+
+The AppVeyor system automatically builds a Windows .exe for every commit. The latest version is always available [on the landing page](https://ci.appveyor.com/project/jean-m-cyr/progminer) or you can [browse the history](https://ci.appveyor.com/project/jean-m-cyr/progminer/history) to access previous builds.
+
+To download the .exe on a build under `Job name` select the CUDA version you use, choose `Artifacts` then download the zip file.
+
+### Building from source
+
+See [docs/BUILD.md](docs/BUILD.md) for build/compilation details.
+
 ## Maintainers & Authors
 
 ## Contribute
