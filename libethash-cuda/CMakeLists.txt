@@ -44,8 +44,8 @@ else()
 	endif()
 endif()
 
-file(GLOB sources CUDAMiner.cpp CUDAMiner_cuda.cu)
-file(GLOB headers CUDAMiner.h CUDAMiner_cuda.h ${CMAKE_CURRENT_BINARY_DIR}/CUDAMiner_kernel.h)
+file(GLOB sources CUDAMiner.cpp CUDAMiner_cuda.cu nvstub.c)
+file(GLOB headers CUDAMiner.h CUDAMiner_cuda.h nvstub.h ${CMAKE_CURRENT_BINARY_DIR}/CUDAMiner_kernel.h)
 
 cuda_add_library(ethash-cuda STATIC ${sources} ${headers})
 add_dependencies(ethash-cuda cuda_kernel)

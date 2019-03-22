@@ -18,7 +18,7 @@ along with progminer.  If not, see <http://www.gnu.org/licenses/>.
 #include <fstream>
 #include <iostream>
 
-#include <nvrtc.h>
+#include "nvstub.h"
 
 #include <libethcore/Farm.h>
 #include <ethash/ethash.hpp>
@@ -601,4 +601,9 @@ void CUDAMiner::search(
                        .count()
                 << " ms.";
 #endif
+}
+
+void CUDAMiner::InitNVStub()
+{
+    ::InitNVStub();
 }
