@@ -1310,11 +1310,6 @@ int main(int argc, char** argv)
         return 1;
     }
 
-#if ETH_ETHASHCUDA
-    CUDAMiner::InitNVStub();
-#endif
-
-
     try
     {
         MinerCLI cli;

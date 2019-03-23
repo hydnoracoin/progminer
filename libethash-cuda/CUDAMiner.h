@@ -21,7 +21,10 @@ along with progminer.  If not, see <http://www.gnu.org/licenses/>.
 #include <libethcore/EthashAux.h>
 #include <libethcore/Miner.h>
 #include <libprogpow/ProgPow.h>
+
 #include <cuda.h>
+#include <nvrtc.h>
+
 #include "CUDAMiner_cuda.h"
 
 #include <functional>
@@ -41,8 +44,6 @@ public:
 
     void search(
         uint8_t const* header, uint64_t target, uint64_t _startN, const dev::eth::WorkPackage& w);
-
-    static void InitNVStub();
 
 protected:
     bool initDevice() override;
