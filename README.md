@@ -49,9 +49,9 @@ Note that Progminer doesn't support mining Bitcoin-based ProgPoW implementations
 
 Connecting to [progpool.pro](https://progpool.pro):
 
-`./progminer -P stratum1+tcp://0xaa16a61dec2d3e260cd1348e48cd259a5fb03f49.test@progpool.pro:8008` or
+`./progminer -P stratum1+tcp://0xaa16a61dec2d3e260cd1348e48cd259a5fb03f49.test@pool.hydnora.org:8008` or
 
-`progminer.exe -P stratum1+tcp://0xaa16a61dec2d3e260cd1348e48cd259a5fb03f49.test@progpool.pro:8008`
+`progminer.exe -P stratum1+tcp://0xaa16a61dec2d3e260cd1348e48cd259a5fb03f49.test@pool.hydnora.org:8008`
 
 ## Build
 
