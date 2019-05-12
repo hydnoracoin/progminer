@@ -1,4 +1,4 @@
-# progminer (ethminer fork with ProgPoW implementation)
+# progminer  (ethminer fork with ProgPoW implementation)
 
 ![progminer](progminer.png)
 
